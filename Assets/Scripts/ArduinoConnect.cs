@@ -22,7 +22,7 @@ public class ArduinoConnect : MonoBehaviour {
 
     private void Update()
     {
-        WriteToArduino("P");
+        WriteToArduino("p");
         string values = ReadFromArduino();
 
         if(values != null)
@@ -36,7 +36,7 @@ public class ArduinoConnect : MonoBehaviour {
         }
     }
 
-    void WriteToArduino(string msg)
+    public void WriteToArduino(string msg)
     {
         serial.WriteLine(msg);
         serial.BaseStream.Flush();
