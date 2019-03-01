@@ -16,4 +16,6 @@ public class Manager : MonoBehaviour {
         scoreP1.text = scoreOne.ToString();
         scoreP2.text = scoreTwo.ToString();
     }
+
+
 }

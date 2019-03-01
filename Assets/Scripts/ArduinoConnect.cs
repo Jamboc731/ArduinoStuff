@@ -8,7 +8,7 @@ public class ArduinoConnect : MonoBehaviour {
 
     public GameObject playerOne;
     public GameObject playerTwo;
-
+    public bool playing = true;
     public int commPort = 0;
 
     private SerialPort serial;
@@ -57,6 +57,8 @@ public class ArduinoConnect : MonoBehaviour {
 
     private void OnDestroy()
     {
+        WriteToArduino("r");
+        StopAllCoroutines();
         serial.Close();
     }
 
